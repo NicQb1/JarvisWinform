@@ -1,0 +1,2 @@
+c:\users\nhutchison\documents\visual studio 2015\Projects\JarvisWinform\JarvisWinform\bin\Debug\JarvisWinform.exe.config
+C:\Users\nhutchison\Documents\GitHub\JarvisWinform\JarvisWinform\bin\Debug\JarvisWinform.exe.config

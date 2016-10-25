@@ -8,5 +8,10 @@ namespace GraphDB.BusinessObjects
 {
     public class POSTuplePairsX4BO:BOBase
     {
+        public int memoryLength;
+        public void SetMemoryLength(int count)
+        {
+            memoryLength = count;
+        }
     }
 }

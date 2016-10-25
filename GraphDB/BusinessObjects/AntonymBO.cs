@@ -9,11 +9,16 @@ namespace GraphDB.BusinessObjects
 {
    public  class AntonymBO
     {
+        public int memoryLength;
         private List<WordBO> antonyms;
         public Session CurrentSession { get; set; }
         public GraphClient client;
         public string text;
 
+        public void SetMemoryLength(int count)
+        {
+            memoryLength = count;
+        }
         public List<WordBO> Antonyms
         {
             get

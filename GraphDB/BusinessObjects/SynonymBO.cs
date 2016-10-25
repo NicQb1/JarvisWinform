@@ -8,6 +8,7 @@ namespace GraphDB.BusinessObjects
 {
     public class SynonymBO
     {
+        public int memoryLength;
         private List<WordBO> synonyms;
 
         public List<WordBO> Synonyms
@@ -23,6 +24,11 @@ namespace GraphDB.BusinessObjects
             {
                 synonyms = value;
             }
+        }
+
+        public void SetMemoryLength(int count)
+        {
+            memoryLength = count;
         }
     }
 }

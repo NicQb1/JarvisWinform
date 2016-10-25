@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace GraphDB.BusinessObjects
 {
+    
     public abstract class BOBase
     {
     }
+
+
 }

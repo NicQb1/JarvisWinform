@@ -1,4 +1,4 @@
-﻿using Neo4jClient;
+﻿using GraphDB.Structs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,32 +7,18 @@ using System.Threading.Tasks;
 
 namespace GraphDB.BusinessObjects
 {
-   public  class AntonymBO
+    public class RelationshipDescriptionBO
     {
         private List<float> currentLevels;
         public int memoryLength;
-        private List<WordBO> antonyms;
-        public string text;
-
+        public List<RelationshipDataStruct> relationships;
+        public string type;
+        public string node1;
+        public string node2;
         public void SetMemoryLength(int count)
         {
             memoryLength = count;
         }
-        public List<WordBO> Antonyms
-        {
-            get
-            {
-                if (antonyms == null)
-                    antonyms = new List<WordBO>();
-                return antonyms;
-            }
-
-            set
-            {
-                antonyms = value;
-            }
-        }
-
         public List<float> CurrentLevel
         {
             get
@@ -47,5 +33,6 @@ namespace GraphDB.BusinessObjects
                 currentLevels = value;
             }
         }
+
     }
 }

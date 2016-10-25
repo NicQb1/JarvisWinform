@@ -68,6 +68,7 @@
     <Compile Include="BusinessObjects\POSTuplePairsX2BO.cs" />
     <Compile Include="BusinessObjects\POSTuplePairsX3BO.cs" />
     <Compile Include="BusinessObjects\POSTuplePairsX4BO.cs" />
+    <Compile Include="BusinessObjects\RelationshipDescriptionBO.cs" />
     <Compile Include="BusinessObjects\SynonymBO.cs" />
     <Compile Include="BusinessObjects\WordBO.cs" />
     <Compile Include="GraphDB.cs" />
@@ -78,10 +79,12 @@
     <Compile Include="Nodes\POSTuplePairsX2.cs" />
     <Compile Include="Nodes\POSTuplePairsX3.cs" />
     <Compile Include="Nodes\POSTuplePairsX4.cs" />
+    <Compile Include="Nodes\RelationshipDescription.cs" />
     <Compile Include="Nodes\Synonym.cs" />
     <Compile Include="Nodes\Word.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="Structs\RelationshipDataStruct.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

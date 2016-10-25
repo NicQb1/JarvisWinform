@@ -8,6 +8,7 @@ namespace GraphDB.BusinessObjects
 {
     public class WordBO : BOBase
     {
+        private List<float> currentLevels;
         public int memoryLength;
         public string text;
 
@@ -26,6 +27,20 @@ namespace GraphDB.BusinessObjects
             }
         }
         private List<PartOfSpeechBO> pOSList;
+        public List<float> CurrentLevel
+        {
+            get
+            {
+                if (currentLevels == null)
+                    currentLevels = new List<float>();
+                return currentLevels;
+            }
+
+            set
+            {
+                currentLevels = value;
+            }
+        }
         public void SetMemoryLength(int count)
         {
             memoryLength = count;

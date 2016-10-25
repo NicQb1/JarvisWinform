@@ -65,7 +65,25 @@ namespace GraphDB.Nodes
             }
         }
 
+        public void CreateRelationshipWordPOS(WordBO word, PartOfSpeechBO pos)
+        {
+            RelationshipDescription rd = new RelationshipDescription(CurrentSession);
+            RelationshipDescriptionBO rdBO = rd.GetRelationShip(word.text, pos.partOfSpeech);
 
+            client.Cypher
+  .Match("(word:Word)", "(rdBO:RelationshipDescription)")
+  .Where((WordBO wd) => wd.text == word.text)
+  .AndWhere((RelationshipDescriptionBO ps) => ps.node1 == word.text && ps.node2 == pos.partOfSpeech)
+  .CreateUnique("word<-[:WORD_REL_P]->rdBO")
+  .ExecuteWithoutResults();
+
+            client.Cypher
+.Match(  "(rdBO:RelationshipDescription)", "(pos:PartOfSpeech)")
+.Where((RelationshipDescriptionBO ps) => ps.node1 == word.text && ps.node2 == pos.partOfSpeech)
+.AndWhere((PartOfSpeechBO pss) => pss.partOfSpeech == pos.partOfSpeech  )
+.CreateUnique("rdBO<-[:W_REL_POS]->pos")
+.ExecuteWithoutResults();
+        }
 
     }
 }

@@ -8,6 +8,7 @@ namespace GraphDB.BusinessObjects
 {
     public class SynonymBO
     {
+        private List<float> currentLevels;
         public int memoryLength;
         private List<WordBO> synonyms;
 
@@ -29,6 +30,20 @@ namespace GraphDB.BusinessObjects
         public void SetMemoryLength(int count)
         {
             memoryLength = count;
+        }
+        public List<float> CurrentLevel
+        {
+            get
+            {
+                if (currentLevels == null)
+                    currentLevels = new List<float>();
+                return currentLevels;
+            }
+
+            set
+            {
+                currentLevels = value;
+            }
         }
     }
 }
